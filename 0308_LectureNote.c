@@ -1,6 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 
-// made by taewon-seo, INU ESE, 2024-03-12 update
+// made by taewon-seo, INU ESE, 2024-04-02 update
 /*
 *****************
 * 20240308 실습 *
@@ -271,8 +271,8 @@ main 함수에서는swap 함수를 호출하여 a와 b의 값을 교환한 후, 결과를 출력.
 #endif
 
 
-#if 0
-
+#if 1
+// 2024-04-02 update
 /*
 교재 연습 문제) 
 크기가 n인 배열 array에서 임의의 위치 loc에 정수 value를 삽입하는 함수
@@ -280,7 +280,7 @@ insert()를 작성하시오.
 
 정수가 삽입되면 그 뒤에 있는 정수들은 한 칸씩 뒤로 밀려야 한다.
 현재 배열에 들어있는 원소의 개수는 items개라고 하자.
-(여기서 items < n라고 가정)
+(여기서 items < 10 라고 가정)
 
 void insert(int array[], int loc, int value} {
 
@@ -290,21 +290,21 @@ void insert(int array[], int loc, int value} {
 void insert(int array[], int loc, int value) {
 
     // 배열에 정수 삽입
-    for (int i = loc; i >= 0; i--) {
+    for (int i = 8; i >= loc; i--) {
         array[i + 1] = array[i];
     }
     array[loc] = value;
 }
 
 int main() {
-    int array[10] = { 1, 2, 3, 4, 5 };
+    int array[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
     // 배열에 값 삽입
     insert(array, 2, 10);
 
     // 결과 출력
     printf("배열: ");
-    for (int i = 0; i < 6; i++) {
+    for (int i = 0; i < 10; i++) {
         printf("%d ", array[i]);
     }
     printf("\n");
