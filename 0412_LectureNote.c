@@ -22,7 +22,7 @@ DLL 구현 실습
 #include <stdio.h>
 #include <stdlib.h>  // malloc, free
 
-#if 0 // 1772: [2024 데이터구조 실습] SLL 구현 4
+#if 1 // 1772: [2024 데이터구조 실습] SLL 구현 4
 
 // SLL 역순으로 만들기
 
